@@ -1,0 +1,11 @@
+{
+  "name": "telbot-dictionary",
+  "version": "1.0.0",
+  "description": "telegram bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Vladimir K.",
+  "license": "ISC"
+}
