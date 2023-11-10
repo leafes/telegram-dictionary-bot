@@ -4,7 +4,7 @@ import getMeaning from "./api.js";
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.start((ctx) => ctx.reply('Привет, я бот-словарь, отправь мне слово и я найду его значение в толковом словаре'));
+bot.start((ctx) => ctx.reply('<b>Привет, я бот-словарь, отправь мне слово и я найду его значение в толковом словаре</b>'));
 
 bot.on(message('text'), async (ctx) => {
   const meaning = await getMeaning(ctx.message.text);

@@ -7,7 +7,7 @@ const getMeaning = async (word) => {
   const result = await f.json();
   // FIX later
   const response = result;
-  return response.def;
+  return response.def[0];
 };
 
 export default getMeaning;
