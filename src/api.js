@@ -5,7 +5,6 @@ const getMeaning = async (word) => {
   console.log('Выполняю поиск по слову: '+ word);
   const f = await fetch(`${API_URL}${QUERIES}${word}`);
   const result = await f.json();
-  // FIX later
   const response = result;
   return response.def[0];
 };
