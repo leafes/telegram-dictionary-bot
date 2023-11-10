@@ -7,5 +7,8 @@
     "test": "test"
   },
   "author": "Vladimir K.",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^4.15.0"
+  }
 }
