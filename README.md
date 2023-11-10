@@ -2,7 +2,7 @@
 
 Бот для джема в СПАНС
 https://t.me/spansdictionarybot
-![](https://i.imgur.com/FSWzmgg.png "MarineGEO logo")
+![](https://i.imgur.com/FSWzmgg.png)
 Установка:
  `npm i `
 
