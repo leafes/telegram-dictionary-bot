@@ -6,6 +6,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 bot.start((ctx) => ctx.reply('Привет, я бот-словарь, отправь мне слово и я найду его значение в толковом словаре'));
 
 bot.on(message('text'), async (ctx) => {
+  ctx.reply('test');
   });
 
 bot.launch(); 
