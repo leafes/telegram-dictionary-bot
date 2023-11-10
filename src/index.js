@@ -1,15 +1,16 @@
 import { Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
 import getMeaning from "./api.js";
-
+import formatMeaning from "./formatter.js";
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((ctx) => ctx.reply('<b>Привет, я бот-словарь, отправь мне слово и я найду его значение в толковом словаре</b>'));
 
 bot.on(message('text'), async (ctx) => {
-  const meaning = await getMeaning(ctx.message.text);
-  console.log(meaning)
-  ctx.reply(meaning);
+  const wordMeanings = await getMeaning(ctx.message.text);
+  const formattedMeaning = await formatMeaning(wordMeanings);
+  console.log(formattedMeaning)
+  ctx.reply(formattedMeaning);
   });
 
 bot.launch(); 

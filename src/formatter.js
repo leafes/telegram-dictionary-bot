@@ -1,10 +1,10 @@
 import getMeaning from "./api.js";
 
-const formattedMeaning = async (word) => {
-  const meaning = await getMeaning(word);
-
-  const message = `Поиск по слову: ${meaning.text}`;
-  return JSON.stringify(message);
+const formatMeaning = async (meaningData) => {
+  if (!meaningData) return 'Произошла ошибка!'
+  const listOfMeanings = meaningData.tr.map((meaning) => meaning.text)
+  const message = `Поиск по слову: ${meaningData.text}\n----\nЧасть речи: ${meaningData.pos} \nЗначения: ${listOfMeanings.join(', ')}`;
+  return message;
 }
 
-console.log(await formattedMeaning('Дверь'));
+export default formatMeaning;
